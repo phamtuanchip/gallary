@@ -3,7 +3,6 @@ package com.dao;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.transaction.Transactional;
 
 import com.domain.Employee;
 
@@ -12,7 +11,6 @@ public class SqliteDaoImpl implements DataDao {
 	 
 
 	@Override
-	@Transactional
 	public int insertRow(Employee employee) {
 		 
 		return (Integer) 1;

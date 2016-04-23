@@ -20,26 +20,26 @@
 
 	</bean>
 
-	<bean id="sessionFactory"
-		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<property name="annotatedClasses">
-			<list>
-				<value>com.domain.Employee</value>
-			</list>
-		</property>
-		<property name="hibernateProperties">
-			<props>
-				<prop key="hibernate.dialect">org.hibernate.dialect.SQLiteDialect</prop>
-				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
-			</props>
-		</property>
-	</bean>
+<!-- 	<bean id="sessionFactory" -->
+<!-- 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"> -->
+<!-- 		<property name="dataSource" ref="dataSource" /> -->
+<!-- 		<property name="annotatedClasses"> -->
+<!-- 			<list> -->
+<!-- 				<value>com.domain.Employee</value> -->
+<!-- 			</list> -->
+<!-- 		</property> -->
+<!-- 		<property name="hibernateProperties"> -->
+<!-- 			<props> -->
+<!-- 				<prop key="hibernate.dialect">org.hibernate.dialect.SQLiteDialect</prop> -->
+<!-- 				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop> -->
+<!-- 			</props> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
 
-	<bean id="txManager"
-		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-		<property name="sessionFactory" ref="sessionFactory" />
-	</bean>
+<!-- 	<bean id="txManager" -->
+<!-- 		class="org.springframework.orm.hibernate4.HibernateTransactionManager"> -->
+<!-- 		<property name="sessionFactory" ref="sessionFactory" /> -->
+<!-- 	</bean> -->
 
 	<bean id="persistenceExceptionTranslationPostProcessor"
 		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
@@ -55,7 +55,8 @@
 	</bean>
 
 
-	<bean id="dataDaoImpl" class="com.dao.DataDaoImpl" />
+<!-- 	<bean id="dataDaoImpl" class="com.dao.DataDaoImpl" /> -->
+	<bean id="dataDaoImpl" class="com.dao.SqliteDaoImpl" />
 	<bean id="dataServiceImpl" class="com.services.DataServiceImpl" />
 
 </beans>
