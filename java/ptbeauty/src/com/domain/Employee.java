@@ -1,31 +1,17 @@
 package com.domain;
 import java.sql.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
 
-
-@Entity
 public class Employee {
 
-	@Id
-	@GeneratedValue
 	private int id;
 	
-	@Column(name = "fullname")
 	private String fullname;
-	 @Column(name = "date")
 	private Date date;
-	 @Column(name = "gender")
 	private String gender;
-	 @Column(name = "address")
 	private String address;
-	 @Column(name = "email")
 	private String email;
-	 @Column(name = "phone")
 	private String phone;
 
 	public int getId() {
